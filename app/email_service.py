@@ -1,4 +1,3 @@
-
 import os
 
 from dotenv import load_dotenv
@@ -7,13 +6,10 @@ from sendgrid.helpers.mail import Mail
 
 # ENVIRONMENT VARIABLES AND CONSTANTS
 
-load_dotenv() # go look in the .env file for any env vars
+load_dotenv() 
 
 SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
 SENDER_ADDRESS = os.getenv("SENDER_ADDRESS")
-
-
-
 
 def send_email(recipient_address=SENDER_ADDRESS, subject="[Shopping Cart App] Testing 123", html_content="<p>Hello World</p>"):
     print("SENDING EMAIL TO:", recipient_address)
@@ -39,9 +35,6 @@ def send_email(recipient_address=SENDER_ADDRESS, subject="[Shopping Cart App] Te
 
 
 if __name__ == "__main__":
-
-    # ONLY WANT TO DO IF RUNNING THIS FILE FROM COMMAND LINE
-    # (NOT IF IMPORTING A FUNCTION FROM THIS FILE)
     user_address = input("Please enter your email address: ")
 
 
