@@ -7,7 +7,6 @@ from sendgrid.helpers.mail import Mail
 # ENVIRONMENT VARIABLES AND CONSTANTS
 
 load_dotenv() 
-
 SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
 SENDER_ADDRESS = os.getenv("SENDER_ADDRESS")
 
@@ -28,10 +27,12 @@ def send_email(recipient_address=SENDER_ADDRESS, subject="[Shopping Cart App] Te
         print(response.status_code) #> 202 indicates SUCCESS
         print(response.body)
         print(response.headers)
-
+        return response.status_code
+    
     except Exception as err:
         print(type(err))
         print(err)
+        return None
 
 
 if __name__ == "__main__":
