@@ -31,8 +31,8 @@ def hello_world():
     name = url_params.get("name") or "World"
 
     message = f"Hello, {name}!"
-    return message
-    #return render_template("hello.html", message=message)
+    #return message
+    return render_template("hello.html", message=message, x=5)
 
 @home_routes.route("/api/books.json")
 def books():
