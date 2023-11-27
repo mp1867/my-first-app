@@ -6,7 +6,8 @@ from sendgrid.helpers.mail import Mail
 
 # ENVIRONMENT VARIABLES AND CONSTANTS
 
-load_dotenv() 
+load_dotenv()  #go look in the .env for any env variables
+
 SENDGRID_API_KEY = os.getenv("SENDGRID_API_KEY")
 SENDER_ADDRESS = os.getenv("SENDER_ADDRESS")
 
@@ -36,6 +37,8 @@ def send_email(recipient_address=SENDER_ADDRESS, subject="[Shopping Cart App] Te
 
 
 if __name__ == "__main__":
+
+    #you only want to do this if you're running the file from command line
     user_address = input("Please enter your email address: ")
 
 
