@@ -1,4 +1,4 @@
-# my-first-appp
+# my-first-app
 ## Setup
 
 Create and activate a virtual environment:
