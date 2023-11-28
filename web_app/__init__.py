@@ -9,7 +9,8 @@ from web_app.routes.unemployment_routes import unemployment_routes
 #from web_app.routes.book_routes import book_routes
 #from web_app.routes.weather_routes import weather_routes
 
-SECRET_KEY = os.getenv("SECRET_KEY", default="super secret") # set this to something else on production!!!
+SECRET_KEY = os.getenv("SECRET_KEY", default="super secret") 
+# set this to something else on production!!!
 
 def create_app():
     app = Flask(__name__)

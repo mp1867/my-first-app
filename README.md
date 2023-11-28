@@ -43,8 +43,11 @@ Run the unemployment report:
 
 ```sh
 #python app/unemployment.py
-
+#when importing we need to change usage command to this: (update your readme accordingly):
 python -m app.unemployment
+```
+run the stocks report
+python -m app.stocks
 ```
 
 Send an example email:
