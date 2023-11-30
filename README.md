@@ -57,15 +57,6 @@ Send an example email:
 python app/email_service.py
 ```
 
-
-## Testing
-
-Run tests:
-
-```sh
-pytest
-```
-
 ### Web App
 
 Run the web app (then view in the browser at http://localhost:5000/):
@@ -79,4 +70,12 @@ FLASK_APP=web_app flask run
 # ... or set FLASK_APP variable via ".env" file
 export FLASK_APP=web_app
 flask run
+```
+
+## Testing
+
+Run tests:
+
+```sh
+pytest
 ```
