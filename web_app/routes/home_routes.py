@@ -29,14 +29,16 @@ def hello_world():
     # get a specific key called "name" if available, otherwise use some specified default value
     # see also: https://www.w3schools.com/python/ref_dictionary_get.asp
     #try:
-    #   name = url_params("name")
+    #    name = url_params["name"]
     #except:
-    #  name = "World"
+    #    name= "World"
     name = url_params.get("name") or "World"
 
     message = f"Hello, {name}!"
     #return message
     return render_template("hello.html", message=message, x=5)
+
+
 
 @home_routes.route("/api/books.json")
 def books():
